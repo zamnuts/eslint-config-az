@@ -1,0 +1,42 @@
+{
+  "name": "@zammit/eslint-config-az",
+  "version": "1.0.0",
+  "main": "eslint.js",
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "config",
+    "airbnb"
+  ],
+  "author": {
+    "name": "Andrew Zammit",
+    "email": "zammit.andrew@gmail.com"
+  },
+  "repository": "github.com:zamnuts/eslint-config-az",
+  "license": "BSD-3-Clause",
+  "scripts": {
+    "format": "prettier --write eslint.js package.json",
+    "lint": "eslint --ignore-path .gitignore .",
+    "prepublishOnly": "yarn test",
+    "test": "yarn lint"
+  },
+  "dependencies": {
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^3.3.0"
+  },
+  "peerDependencies": {
+    "eslint": "^5.10.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsdoc": "^3.14.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^7.2.1",
+    "@commitlint/config-conventional": "^7.1.2",
+    "eslint": "^5.10.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsdoc": "^3.14.0",
+    "husky": "^1.2.1",
+    "lint-staged": "^8.1.0",
+    "prettier": "^1.15.3"
+  }
+}
