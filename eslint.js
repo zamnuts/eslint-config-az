@@ -1,12 +1,14 @@
 'use strict';
 
+const sortKeys = [2, 'asc', {caseSensitive: true, natural: true}];
+
 module.exports = {
   env: {
-    es6: true,
+    es2021: true,
     mocha: true,
     node: true,
   },
-  extends: ['eslint-config-airbnb-base', 'eslint-config-prettier'].map(require.resolve),
+  extends: ['eslint-config-airbnb-base', 'plugin:yml/standard', 'eslint-config-prettier'],
   overrides: [
     {
       files: ['*.test.js'],
@@ -15,11 +17,17 @@ module.exports = {
         'prefer-arrow-callback': 0,
       },
     },
+    {
+      files: ['*.yaml', '*.yml'],
+      parser: 'yaml-eslint-parser',
+    },
   ],
+  parser: '@babel/eslint-parser',
   parserOptions: {
-    sourceType: 'script',
+    requireConfigFile: false,
+    sourceType: 'module',
   },
-  plugins: ['jsdoc'],
+  plugins: ['jsdoc', 'import', 'yml', 'unicorn'],
   rules: {
     camelcase: [2, {properties: 'always'}],
     'class-methods-use-this': 0,
@@ -27,6 +35,7 @@ module.exports = {
     'comma-spacing': [2, {after: true, before: false}],
     'consistent-return': 0,
     eqeqeq: 2,
+    'import/extensions': [2, 'always'],
     'jsdoc/check-param-names': 2,
     'jsdoc/check-types': 2,
     'jsdoc/newline-after-description': [2, 'never'],
@@ -63,7 +72,10 @@ module.exports = {
       },
     ],
     'require-yield': 0,
-    'sort-keys': [2, 'asc', {caseSensitive: true, natural: true}],
+    'sort-keys': sortKeys,
     strict: [2, 'global'],
+    'yml/no-multiple-empty-lines': 2,
+    'yml/quotes': [2, {prefer: 'single'}],
+    'yml/sort-keys': sortKeys,
   },
 };

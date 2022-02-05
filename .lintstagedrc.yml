@@ -1,2 +1,4 @@
-"*.{js,json,css}": ["prettier --write", "git add"]
-"*.js": "eslint --fix"
+'*.{js,json,css}':
+  - prettier --write',
+  - git add
+'*.{js,json,yml}': eslint --fix

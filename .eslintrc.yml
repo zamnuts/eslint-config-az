@@ -1,1 +1,5 @@
 extends: ./eslint.js
+overrides:
+  - files: eslint.js
+    parserOptions:
+      sourceType: script
