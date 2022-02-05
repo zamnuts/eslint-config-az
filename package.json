@@ -1,6 +1,6 @@
 {
   "name": "@zammit/eslint-config-az",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "main": "eslint.js",
   "keywords": [
     "eslint",
@@ -40,15 +40,11 @@
     "eslint-plugin-yml": "^0.13.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^15.0.0",
-    "@commitlint/config-conventional": "^15.0.0",
     "eslint": "^8.8.0",
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-jsdoc": "^37.7.0",
     "eslint-plugin-unicorn": "^40.1.0",
     "eslint-plugin-yml": "^0.13.0",
-    "husky": "^7.0.4",
-    "lint-staged": "^12.1.2",
     "prettier": "^2.5.1"
   }
 }

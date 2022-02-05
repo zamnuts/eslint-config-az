@@ -8,7 +8,7 @@ module.exports = {
     mocha: true,
     node: true,
   },
-  extends: ['eslint-config-airbnb-base', 'plugin:yml/standard', 'eslint-config-prettier'],
+  extends: ['airbnb-base', 'plugin:yml/standard', 'prettier'],
   overrides: [
     {
       files: ['*.test.js'],
